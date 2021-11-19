@@ -1,0 +1,67 @@
+{
+	"title":"欢迎来到 Nuxt 演示项目",
+	"description":"颜色模式：",
+	"links":{
+		"home":"首页",
+		"teachers":"教师",
+		"students":"学生",
+		"books":"书籍",
+		"english":"英文版本",
+		"chinese":"中文版本"
+	},
+	"teachers":{
+		"title":"教师列表页",
+		"teacher" :[
+			{
+				"name":"西莉婭",
+				"id":1
+			},
+			{
+				"name":"簡",
+				"id":2
+			},
+			{
+				"name":"愛妮莎",
+				"id":3
+			}
+		]
+	},
+	"students":{
+		"title":"学生列表页",
+		"student":[
+
+			{
+				"name":"克莉斯汀",
+				"id":1
+			},
+			{
+				"name":"米莉",
+				"id":2
+			},
+			{
+				"name":"桑蒂",
+				"id":3
+			}
+		]
+	},
+	"books":{
+		"title":"书籍列表页",
+		"book":[
+			{
+				"name":"月亮与六便士",
+				"id":1
+			},
+			{
+				"name":"简爱",
+				"id":2
+			},
+			{
+				"name":"追风筝的人",
+				"id":3
+			}
+		]
+	}
+}
+
+
+

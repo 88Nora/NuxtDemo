@@ -1,0 +1,66 @@
+{
+	"title":"Welcome to Nuxt Demo Project",
+	"description":"Color mode:",
+	"links":{
+		"home":"Home",
+		"teachers":"Teachers",
+		"students":"Students",
+		"books":"Books",
+		"english":"English version",
+		"chinese":"Chinese version"
+	},
+	"teachers":{
+		"title":"Teachers List Page",
+		"teacher" :[
+			{
+				"name":"Celia",
+				"id":1
+			},
+			{
+				"name":"Jan",
+				"id":2
+			},
+			{
+				"name":"Althea",
+				"id":3
+			}
+		]
+	},
+	"students":{
+		"title":"Students List Page",
+		"student":[
+			{
+				"name":"Christine",
+				"id":1
+			},
+			{
+				"name":"Millie",
+				"id":2
+			},
+			{
+				"name":"Sandy",
+				"id":3
+			}
+		]
+	},
+	"books":{
+		"title":"Books List Page",
+		"book":[
+			{
+				"name":"The Moon and Sixpence",
+				"id":1
+			},
+			{
+				"name":"Jane Eyre",
+				"id":2
+			},
+			{
+				"name":"The Kite Runner",
+				"id":3
+			}
+		]
+	}
+}
+
+
+

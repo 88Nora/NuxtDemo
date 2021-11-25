@@ -1,19 +1,22 @@
 <template>
 	<div class="showMsg">
-		<p>用户信息输出：</p>{{userInfo.value.text}}
+		<p>用户信息输出：</p>{{userInfo}}
 	</div>
 	
 </template>
 <script>
-import {info} from './PublicContent.vue'
+
+import { studentStore } from '~/state/student'
 
 export default {
 	name:'teachers',
-	data() {
-		return {
-			userInfo:info
-		};
+	setup(){
+		const { userInfo } = studentStore()
+		return{
+			userInfo
+		}
 	}
+	
 }
 </script>
 <style>

@@ -10,16 +10,15 @@
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.30.0",
+    "@nuxtjs/i18n": "^7.2.0",
     "core-js": "^3.15.1",
-    "element-theme": "^2.0.1",
-    "element-themex": "^1.0.3",
     "element-ui": "^2.15.6",
-    "nuxt": "^2.15.7",
-    "vue-i18n": "^8.26.7"
+    "nuxt": "^2.15.7"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/svg": "^0.3.0",
-    "element-theme-chalk": "^2.15.6"
+    "sass": "^1.43.5",
+    "sass-loader": "10"
   }
 }

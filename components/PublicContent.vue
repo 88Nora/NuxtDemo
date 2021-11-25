@@ -1,25 +1,25 @@
 <template>
 	<div class="userInfoTable">
 		<h2 class="userTitle">用户信息表</h2>
-		<el-form class="form">
-			<el-form-item>
-				<el-input type="primary" placeholder="please enter username" v-model="username" clearable></el-input>
-			</el-form-item>
-			<el-form-item>
-				<el-input placeholder="please enter age" v-model="age" clearable></el-input>
-			</el-form-item>	
+		<Form class="form">
+			<FormItem>
+				<Input type="primary" placeholder="please enter username" v-model="username" clearable></Input>
+			</FormItem>
+			<FormItem>
+				<Input placeholder="please enter age" v-model="age" clearable></Input>
+			</FormItem>	
 			<el-row>
-				<el-button type="primary" @click="onSave">Save</el-button>
+				<Button type="primary" @click="onSave">Save</Button>
 			</el-row>
 					
-		</el-form>
+		</Form>
 		
 	</div>
 </template>
 
 <script>
 import {ref,reactive, toRefs, computed} from '@nuxtjs/composition-api'
-
+import { Form, FormItem, Input, Button } from 'element-ui'
 const userMsg = reactive({
 	username:"张三",
 	age:12
@@ -29,6 +29,7 @@ const userInfo = {text:''}
 
 export default {
 	name:'PublicContent',
+	components:{ Form, FormItem, Input, Button},
 	setup() {	
 		userInfo.text = computed(() => {
 			return "姓名：" + userMsg.username + "\n\n年龄：" + userMsg.age;

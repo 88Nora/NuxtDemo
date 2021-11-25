@@ -18,34 +18,24 @@
 </template>
 
 <script>
-import {ref,reactive, toRefs, computed} from '@nuxtjs/composition-api'
+import {defineComponent} from '@nuxtjs/composition-api'
 import { Form, FormItem, Input, Button } from 'element-ui'
-const userMsg = reactive({
-	username:"张三",
-	age:12
-})
+import {studentStore} from '~/state/student'
 
-const userInfo = {text:''}
-
-export default {
+export default defineComponent({
 	name:'PublicContent',
 	components:{ Form, FormItem, Input, Button},
 	setup() {	
-		userInfo.text = computed(() => {
-			return "姓名：" + userMsg.username + "\n\n年龄：" + userMsg.age;
-		})
 
-		var onSave = () =>{
-			alert("Saved successfully")
-		}
+		const { userInfo , onSave, username, age } = studentStore();
+		
 		
 		return {
-			...toRefs(userMsg),onSave
+			userInfo , onSave, username, age
 		}
 	},
-}
+})
 
-export const info = ref(userInfo);
 </script>
 
 <style>

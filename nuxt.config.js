@@ -25,14 +25,20 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/element-ui',
-    '~/plugins/i18n.js',
-    '~/plugins/event-bus.ts'
   ],
 
-  generate: {
-    routes: ['/en-US', '/en-US/teachers','/en-US/students','/en-US/books', '/zh-ZN', '/zh-ZN/teachers', '/zh-ZN/students', '/zh-ZN/books']
+  modules:['@nuxtjs/i18n'],
+
+  // i18n setting for nuxt
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'zh', iso: 'zh-CN', file: 'zh.json' },
+    ],
+    defaultLocale: 'zh',
+    strategy: 'prefix_and_default',
+    langDir: '~/locales/',
   },
-  
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -45,10 +51,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    vendor:['element-ui','vue-i18n']
+    vendor:['element-ui']
   },
 
-  router: {              // customize nuxt.js router (vue-router).
-    middleware: 'i18n'   // middleware all pages of the application
-  },
+
 }

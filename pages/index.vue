@@ -1,9 +1,9 @@
 <template>
   <div>
     <nav>
-      <NuxtLink :to="$i18n.path('teachers')" class="Header_Link">{{$t('links.teachers')}}</NuxtLink>
-      <NuxtLink :to="$i18n.path('students')" class="Header_Link">{{$t('links.students')}}</NuxtLink>
-      <NuxtLink :to="$i18n.path('books')" class="Header_Link">{{$t('links.books')}}</NuxtLink>
+      <NuxtLink :to="localePath('teachers')" class="Header_Link">{{$t('links.teachers')}}</NuxtLink>
+      <NuxtLink :to="localePath('students')" class="Header_Link">{{$t('links.students')}}</NuxtLink>
+      <NuxtLink :to="localePath('books')" class="Header_Link">{{$t('links.books')}}</NuxtLink>
       <NuxtLink v-if="$i18n.locale === 'en-US'" :to="`/zh-CN` + $route.fullPath" class="Header_Link" active-class="none" exact>
         {{ $t('links.chinese') }}
       </NuxtLink>

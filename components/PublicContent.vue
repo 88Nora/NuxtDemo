@@ -8,23 +8,21 @@
 			<FormItem>
 				<Input placeholder="please enter age" v-model="age" clearable></Input>
 			</FormItem>	
-			<el-row>
+			<Row>
 				<Button type="primary" @click="onSave">Save</Button>
-			</el-row>
-					
-		</Form>
-		
+			</Row>					
+		</Form>		
 	</div>
 </template>
 
 <script>
 import {defineComponent} from '@nuxtjs/composition-api'
-import { Form, FormItem, Input, Button } from 'element-ui'
+import { Form, FormItem, Input,Row, Button } from 'element-ui'
 import {studentStore} from '~/state/student'
 
 export default defineComponent({
 	name:'PublicContent',
-	components:{ Form, FormItem, Input, Button},
+	components:{ Form, FormItem, Input,Row, Button},
 	setup() {	
 
 		const { userInfo , onSave, username, age } = studentStore();

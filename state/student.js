@@ -1,5 +1,4 @@
-
-import {ref,reactive, toRefs, computed} from '@nuxtjs/composition-api'
+import {reactive, toRefs, computed} from '@nuxtjs/composition-api'
 const userMsg = reactive({
 	username:"张三",
 	age:12
@@ -15,7 +14,7 @@ export const studentStore = () => {
         alert("Saved successfully")
     }
     return {
-        userInfo,
-        ...toRefs(userMsg),onSave
+       
+        ...toRefs(userMsg),userInfo,onSave
     }
 }

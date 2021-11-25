@@ -33,7 +33,7 @@ export default {
       { code: 'en', iso: 'en-US', file: 'en.json' },
       { code: 'zh', iso: 'zh-CN', file: 'zh.json' },
     ],
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     strategy: 'prefix_and_default',
     langDir: '~/locales/',
   },
